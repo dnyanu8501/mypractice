@@ -1,0 +1,10 @@
+.container{
+    background-color: rgb(32, 129, 209);
+    padding: 5px;
+    
+}
+div.container a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
