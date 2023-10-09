@@ -1,0 +1,16 @@
+<div>
+    <h1>SignUp Form</h1>
+    <form [formGroup]="signupFormGroup">
+        <label> user name</label><br>
+        <input type="text" formControlName="username"><br>
+        <span class="err" *ngIf="signupFormGroup.get('username')?.errors?.['maxlength']">Maximum 10 Character Allowed</span>
+        <br>
+
+        <label>Email Id</label><br>
+        <input type="email" formControlName="emailid" ><br>
+        <span class="err" *ngIf="signupFormGroup.get('emailid')?.errors?.['minlength']"> Email Id Required</span>
+
+        <br><br>
+        <button (click)="submit()" [disabled]="!signupFormGroup.valid">submit</button>
+    </form>
+</div>
