@@ -9,8 +9,13 @@ import { Router } from '@angular/router';
 export class PrincipalHomeComponent {
 
   constructor (private router:Router){}
+ 
 
   signup(){
     this.router.navigateByUrl("principalmod/signupc");
+  }
+
+  login(){
+    this.router.navigateByUrl("principalmod/login");
   }
 }

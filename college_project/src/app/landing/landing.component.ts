@@ -11,7 +11,7 @@ export class LandingComponent {
   constructor(private router:Router){}
 
   principalmod(){
-    this.router.navigateByUrl("principalmod/principalhome")
+    this.router.navigateByUrl("principalmod/login")
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal-login',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class PrincipalLoginComponent {
 
+  constructor (private router:Router){}
+
+  signup(){
+    this.router.navigateByUrl('principalmod/Signuppage')
+  }
+  back(){
+    this.router.navigateByUrl('landing')
+  }
 }

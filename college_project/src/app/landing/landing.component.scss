@@ -1,0 +1,47 @@
+.principalmodul{
+    background-color: rgb(104, 218, 170);
+    width: 100%;
+    height: 630px;
+    background-image: url("../../assets/pexels2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn{
+    margin-top: 1px;
+    color: white;
+    background-color: rgb(12, 12, 12);
+    opacity: 1;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 2px;
+ 
+}
+.btn:hover{
+    color:rgb(223, 26, 26);
+    font-size: medium;
+    background-color: rgb(233, 245, 167);
+    margin: 4px;
+}
+img{
+   margin-top: 30px;
+   position: absolute;
+   width: 1400px;
+   height: 600px;
+   
+
+
+}
+.container{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(175, 207, 233);
+    border: 2px solid ;
+    opacity: 0.9;
+    z-index: auto;
+}
+h1{
+    text-align: center;
+    color: rgb(213, 243, 105);
+}

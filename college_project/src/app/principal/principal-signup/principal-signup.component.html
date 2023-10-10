@@ -1,16 +1,54 @@
-<div>
+<!-- <div class="container">
     <h1>SignUp Form</h1>
     <form [formGroup]="signupFormGroup">
-        <label> user name</label><br>
+        <label> User Name</label><br>
         <input type="text" formControlName="username"><br>
         <span class="err" *ngIf="signupFormGroup.get('username')?.errors?.['maxlength']">Maximum 10 Character Allowed</span>
         <br>
 
         <label>Email Id</label><br>
-        <input type="email" formControlName="emailid" ><br>
+        <input type="text" formControlName="emailid" ><br>
         <span class="err" *ngIf="signupFormGroup.get('emailid')?.errors?.['minlength']"> Email Id Required</span>
 
         <br><br>
-        <button (click)="submit()" [disabled]="!signupFormGroup.valid">submit</button>
+        <button class="btn" (click)="submit()" [disabled]="!signupFormGroup.valid">submit</button>
     </form>
-</div>
+</div> -->
+<body>
+    <div class="container">
+        <p class="back" (click)="back()">Back</p>
+        <h1 class="title1">Sign Up </h1>
+        <form>
+            <div class="main">
+                <div class="input-box">
+                    <label for="name">Full name</label>
+                    <input type="text" placeholder="Enter Your name">
+          
+                    <label for="uname">User name</label>
+                    <input type="text" placeholder="Enter Your User Name">
+            
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter Your Email">
+              
+                    <label for="contact">Contact Number</label>
+                    <input type="text" placeholder="Enter Your Contact Number">
+                </div>
+               
+            </div>
+            <Span class="gender">
+                <div class="gen">
+                    <label for="">Gender :-</label>
+                    <input type="radio" name="gen">Male
+                    <input type="radio" name="gen">Female
+                    <input type="radio" name="gen">Other
+
+
+                </div>
+
+            </Span>
+           
+                <button class="btn">Submit</button>
+           
+        </form>
+    </div>
+</body>
