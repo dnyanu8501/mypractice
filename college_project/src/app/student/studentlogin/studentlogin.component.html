@@ -1,0 +1,74 @@
+<body>
+    
+
+<div class="container">
+    
+    <div class="container2">
+        <form #loginForm="ngForm" autocomplete="off" *ngIf="!showform && !signuppage" >
+        <h2>Login Form</h2>
+       
+        <label for="">User Name</label>
+        <div>
+            <input #userName="ngModel" ngModel name="userName" type="text" required placeholder="Enter User Name">
+        </div>
+        <span *ngIf="userName.touched && userName.errors?.['required']" class="err">User Name must be required</span>
+        <br>
+        <label for="">Password </label>
+        <div>
+            <input  #password="ngModel" ngModel name="password" required type="password" placeholder="Enter Password">
+        </div>
+        <span *ngIf="password.touched && password.errors?.['required']" class="err">Password must be required</span>
+        <br>
+        <button  (click)="password.value && userName.value? submit(loginForm.value):null">Login</button>
+       <br><br>
+       <label (click)="forgotpage()"><u>Forgot Password ?</u></label><br><br>
+
+     <label class="createacc" (click)="newsignuppage()" >Create new account</label>
+    <br>
+    </form>
+    <form  *ngIf="showform " #forgotForm="ngForm"> 
+        <div class="back" (click)="forgotpage()">black</div>
+        <br>
+        <br>
+        <label >New Password</label>
+        <div>
+            <input type="password" (blur)="newinputfield(newpass.value,conpass.value) " name="newpass" #newpass="ngModel" ngModel required>
+        </div>
+        <span class="err"  *ngIf="newpass.touched &&  newpass.errors?.['required']">Enter new password</span>
+        <br>
+        <label >Confirm Password</label>
+        <div>
+            <input type="password" (blur)="newinputfield(newpass.value,conpass.value)"  name="conpass" #conpass="ngModel" ngModel
+            >
+        </div>
+        <span *ngIf="newpass.touched && matcherr">New password and confirm password should match</span>
+        <br>
+        <button (click)="newpass.value && conpass.value ? forsubmit(forgotForm.value):null" >submit</button>
+
+    </form>
+    <form *ngIf="signuppage">
+        <div class="container-newaccount">
+            <div class="back" (click)="newsignuppage()">Back</div>
+           
+            <h1>Sign Up</h1>
+            <input class="inputfname" type="text" placeholder="First Name">
+            <input class="inputfname"  type="text" placeholder="Last Name">
+            <br><br>
+            <input type="text" placeholder="Mobile number or Email address"><br><br>
+            <label >Birth Date :  </label>
+            <input class="inputfname" type="date">
+            <br><br>
+            <label >Gender</label>
+            <input class="inputgender"type="radio">Male
+            <input class="inputgender" type="radio">Female
+            <br><br>
+            <button class="btnsignup">Sign Up</button>
+        </div>
+
+    </form>
+    </div>
+
+  
+
+</div>
+</body>

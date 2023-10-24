@@ -16,38 +16,61 @@
 </div> -->
 <body>
     <div class="container">
+        <form [formGroup]="signControlForm">
         <p class="back" (click)="back()">Back</p>
         <h1 class="title1">Sign Up </h1>
-        <form>
+       
             <div class="main">
                 <div class="input-box">
                     <label for="name">Full name</label>
-                    <input type="text" placeholder="Enter Your name">
-          
+                    <input type="text" placeholder="Enter Your name" formControlName="fname"><br>
+                    <span class="err" *ngIf="signControlForm.get('fname')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                    <span class="err" *ngIf="!signControlForm.get('fname')?.errors?.['maxlength'] && signControlForm.get('fname')?.errors?.['pattern']">Only Character Allowed</span>
+                   
+                    <!-- <span class="err" *ngIf="signControlForm.get('fname')?.errors?.['Required'] && signControlForm.get('fname')?.touched">Required Feild</span> -->
+                  
+                    <br>
                     <label for="uname">User name</label>
-                    <input type="text" placeholder="Enter Your User Name">
-            
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter Your Email">
+                    <input type="text" placeholder="Enter Your User Name" formControlName="username"><br>
+                    <span class="err" *ngIf="signControlForm.get('username')?.errors?.['maxlength']"> Maximum 15 Character Allowed</span>
+                    <span class="err" *ngIf="!signControlForm.get('username')?.errors?.['maxlength'] && signControlForm.get('username')?.dirty 
+                    && signControlForm.get('username')?.errors?.['whiteSpace']">White Spaces are not allowed</span>
+              <br>
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter Password" [type]="pass? 'text': 'password'"  formControlName="password" >
+                     <span class="passicon" *ngIf="pass" (click)="hidepass()"> <i class="bi bi-eye-fill"></i></span>
+                     <span class="passicon" *ngIf="!pass" (click)="hidepass()"><i class="bi bi-eye-slash-fill"></i></span>
+              <br>
               
-                    <label for="contact">Contact Number</label>
-                    <input type="text" placeholder="Enter Your Contact Number">
+              <span class="err" *ngIf="signControlForm.get('password')?.errors?.['maxlength']"> Maximum 15 Character Allowed</span>
+              <br>
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter Your Email" formControlName="email"><br>
+                    <span class="err" *ngIf="signControlForm.get('email')?.errors?.['pattern']">Enter Valid Email</span>
+
+                    <br>
+                    <label for="contact" maxlength="10">Contact Number</label>
+                    <input type="text" placeholder="Enter Your Contact Number" formControlName="cnumber"><br>
+                    <span class="err" *ngIf="signControlForm.get('cnumber')?.errors?.['pattern']">Enter Numbers Only</span>
+                    <br>
+                   
+                   
                 </div>
                
             </div>
-            <Span class="gender">
-                <div class="gen">
-                    <label for="">Gender :-</label>
-                    <input type="radio" name="gen">Male
-                    <input type="radio" name="gen">Female
-                    <input type="radio" name="gen">Other
-
-
-                </div>
-
-            </Span>
            
-                <button class="btn">Submit</button>
+                
+                    <label for="">Gender :-</label>
+                    <input type="radio" formControlName="gender" value="Male" (change)="genselect()" >Male
+                    <input type="radio" formControlName="gender" value="Female" (change)="genselect()">Female            
+                    <br>
+                    <span class="err" *ngIf="genderselector">Please Select Gender </span>
+<br>
+          
+                <!-- <i class="bi bi-eye-fill"></i> -->
+
+                <button class="btn" (click)="submit()" [disabled]="!signControlForm.valid">submit</button>
+                <!-- <button class="btn" (click)="submit()" [disabled]="!signControlForm.valid">Submit</button> -->
            
         </form>
     </div>

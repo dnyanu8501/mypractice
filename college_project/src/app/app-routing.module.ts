@@ -6,7 +6,8 @@ const routes: Routes = [
   {path:"",component:LandingComponent},
   {path:"landing",component:LandingComponent},
 
-  {path:"principalmod",loadChildren:()=> import("./principal/principal.module").then(m =>m.PrincipalModule)}
+  {path:"principalmod",loadChildren:()=> import("./principal/principal.module").then(m =>m.PrincipalModule)},
+  {path:"studentmodule",loadChildren:() => import("./student/student.module").then(m=>m.StudentModule) }
 ];
 
 @NgModule({

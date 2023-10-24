@@ -13,5 +13,8 @@ export class LandingComponent {
   principalmod(){
     this.router.navigateByUrl("principalmod/login")
   }
+  studentMod(){
+    this.router.navigateByUrl("studentmodule/studentlogin")
+  }
 
 }
