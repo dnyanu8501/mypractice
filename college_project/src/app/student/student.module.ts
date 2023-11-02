@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentloginComponent } from './studentlogin/studentlogin.component';
 import { FormsModule } from '@angular/forms';
+import { StudentsuccessComponent } from './studentsuccess/studentsuccess.component';
 
 
 
@@ -11,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     StudentloginComponent,
+    StudentsuccessComponent,
    
   ],
   imports: [

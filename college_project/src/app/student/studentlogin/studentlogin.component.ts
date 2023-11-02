@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/landing/services/data.service';
 
 @Component({
   selector: 'app-studentlogin',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class StudentloginComponent {
   
-  constructor(private router: Router){}
+  constructor(private router: Router, private dataService:DataService){}
   showform=false;
   newpass:any;
   conpass:any;
@@ -18,6 +19,10 @@ export class StudentloginComponent {
 
   submit(form: any) {
     console.log(form);
+    this.dataService.username1=form.userName;
+    if(form){
+      this.router.navigateByUrl('studentmodule/studentsuccess');
+    }
 
   }
   forgotpage(){
@@ -26,6 +31,7 @@ export class StudentloginComponent {
 
   forsubmit(data:any){
     console.log(data);
+   
     
   }
   newinputfield(newpassword:any,conpass:any){
@@ -36,6 +42,11 @@ export class StudentloginComponent {
       this.matcherr=true;
     }
 
+  }
+
+  signup(data:any){
+    console.log(data);
+    
   }
   // newsignuppage(){
   //   this.router.navigateByUrl('studentmodule/signuppage')

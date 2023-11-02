@@ -1,4 +1,34 @@
-<p>product works!</p>
+<br><br>
+welcome to {{ prdName}} page ......
+<br><br>
+<button (click)="toShowName()"> Name</button>
+<button (click)="toshowcars()">Cars Name</button>
+<div *ngIf="seeSname">Dnyaneshwar Jotiba Gavade</div>
+
+<br><br>
+<!-- <div>{{cars}}</div> -->
+<span *ngIf="carsname">
+<div *ngFor="let x of cars">{{x}}</div>
+</span>
+<br>
+<input [(ngModel)]="arr" type="text">
+<button (click)="cityList()"  [disabled]="!arr">city</button>
+<br>
+<ul>
+    <li *ngFor="let data of listcityName">{{data}}</li>
+</ul><br><br><br>
+
+
+<br>
+<input type="text" [(ngModel)]="color">
+<div [class.cls1]="color=='green'" [class.cls2]="color=='red'" [class.cls3]="color=='yellow'">
+    hello
+</div>
+<div [ngClass]=" color =='red' ? 'cls2' :'cls1'">
+    hellow everyone  i am dnyaneshwar
+</div> 
+<br>
+
 <div>
     <button (click)="back()">back</button>
 </div>

@@ -19,7 +19,7 @@
         </div>
         <span *ngIf="password.touched && password.errors?.['required']" class="err">Password must be required</span>
         <br>
-        <button  (click)="password.value && userName.value? submit(loginForm.value):null">Login</button>
+        <button  (click)="password.value && userName.value? submit(loginForm.value):null" >Login</button>
        <br><br>
        <label (click)="forgotpage()"><u>Forgot Password ?</u></label><br><br>
 
@@ -46,23 +46,26 @@
         <button (click)="newpass.value && conpass.value ? forsubmit(forgotForm.value):null" >submit</button>
 
     </form>
-    <form *ngIf="signuppage">
+    <form *ngIf="signuppage" autocomplete="off" #signUpPage="ngForm">
         <div class="container-newaccount">
             <div class="back" (click)="newsignuppage()">Back</div>
            
             <h1>Sign Up</h1>
-            <input class="inputfname" type="text" placeholder="First Name">
-            <input class="inputfname"  type="text" placeholder="Last Name">
+            <input class="inputfname" type="text" placeholder="First Name" required ngModel #fname="ngModel" name="fname">
+            <input class="inputfname"  type="text" placeholder="Last Name" required ngModel #lname="ngModel" name="lname"><br>
+            <span class="err" *ngIf="fname.touched && fname.errors?.['required'] ">Full Name is Required</span>
+            <span class="err" *ngIf="fname.touched && !fname.errors?.['required']  && lname.touched  && lname.errors?.['required']">Last Name is Required</span>
             <br><br>
-            <input type="text" placeholder="Mobile number or Email address"><br><br>
+            <input type="email" placeholder="Enter Email address" ngModel #email1="ngModel" name="email1" pattern ="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"><br><br>
+            <span class="err" *ngIf="email1.touched && email1.errors?.['pattern']">Write Valid Format</span><br>
             <label >Birth Date :  </label>
-            <input class="inputfname" type="date">
+            <input class="inputfname" #date1="ngModel" ngModel name="date1" type="date">
             <br><br>
             <label >Gender</label>
-            <input class="inputgender"type="radio">Male
-            <input class="inputgender" type="radio">Female
+            <input class="inputgender"type="radio" ngModel #gender="ngModel" value="Male" name="gen">Male
+            <input class="inputgender" type="radio" ngModel #gender="ngModel" value="Female" name="gen">Female
             <br><br>
-            <button class="btnsignup">Sign Up</button>
+            <button class="btnsignup" (click)="signup(signUpPage.value)" >Sign Up</button>
         </div>
 
     </form>
