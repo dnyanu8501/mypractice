@@ -2,4 +2,15 @@
 
 <div class="profile">
     <p>Welcome  {{usersName}}..... </p>
+   
+</div><br><br>
+<div>
+   Name <input [(ngModel)]="stdName" type="text"><br>
+   <br> City : <input  type="text" [(ngModel)]="cityName"> 
+   <button (click)="addcity()"> Add City</button>
 </div>
+<br>
+-----  --- ---- --- ----  ---- --- -- -- -- ---  -- --- -- ----- - ----  --- ---  ----- -----  --- ----  --- ----  --- -----  --- -----  --- -----  --
+
+<app-studentprofile [studentName]="stdName"  [City]="cityName" [arr1]="arr">
+</app-studentprofile>

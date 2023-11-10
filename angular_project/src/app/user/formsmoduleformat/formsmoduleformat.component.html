@@ -1,0 +1,11 @@
+<form #loginForm="ngForm" autocomplete="off">
+    <div class="main"> 
+        <h2>LOGIN</h2>
+UserName          
+<input type="text" #userName="ngModel" ngModel name="username"> <br><br>
+password
+<input type="text" #password="ngModel" ngModel name="password"><br><br>
+<button (click)="submit(loginForm.value)">submit</button>
+<br><br>
+    </div>
+</form>

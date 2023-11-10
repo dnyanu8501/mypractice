@@ -23,5 +23,6 @@ export class LandingComponent {
  userModule(){
   this.router.navigateByUrl("user/login")
  }
+ 
 
 }

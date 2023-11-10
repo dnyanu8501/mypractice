@@ -22,12 +22,14 @@
         <button  (click)="password.value && userName.value? submit(loginForm.value):null" >Login</button>
        <br><br>
        <label (click)="forgotpage()"><u>Forgot Password ?</u></label><br><br>
+       
 
      <label class="createacc" (click)="newsignuppage()" >Create new account</label>
     <br>
     </form>
+   
     <form  *ngIf="showform " #forgotForm="ngForm"> 
-        <div class="back" (click)="forgotpage()">black</div>
+        <div class="back" (click)="forgotpage()">Back</div>
         <br>
         <br>
         <label >New Password</label>

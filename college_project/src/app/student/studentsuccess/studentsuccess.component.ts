@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/landing/services/data.service';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-studentsuccess',
@@ -8,10 +8,18 @@ import { DataService } from 'src/app/landing/services/data.service';
 })
 export class StudentsuccessComponent {
   usersName:any;
+  stdName:any;
+  cityName:any;
+  arr:any[]=[];
   constructor(private dataService:DataService ){}
   ngOnInit(){
     
     this.usersName=this.dataService.username1
+  }
+  addcity(){
+    this.arr.push(this.cityName);
+  console.log(this.arr)
+  this.cityName=""
   }
 
 }

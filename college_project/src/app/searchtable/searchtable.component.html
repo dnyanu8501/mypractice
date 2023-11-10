@@ -1,0 +1,17 @@
+<p>searchtable works!</p><br>
+<br><br>
+<input type="text" placeholder="type here to search..."
+     [(ngModel)] = "searchedValue">
+
+<br>
+<table class="main">
+<tr>
+    <th *ngFor="let heading of headings">{{heading | uppercase }}</th>
+</tr>
+<tr *ngFor="let data of student | search : searchdata">
+    <td>{{data.name}}</td>
+    <td>{{data.age}}</td>
+    <td>{{data.city}}</td>
+</tr>
+
+</table>

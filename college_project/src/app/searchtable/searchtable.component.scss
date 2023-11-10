@@ -1,0 +1,18 @@
+table,th,td{
+   
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.main{
+    padding: 4px;
+    margin: auto;
+    text-align: center;
+    width: 350px;
+
+}
+td{
+    background-color: rgb(148, 151, 144);
+}
+th{
+    background-color: rgb(244, 33, 201);
+}

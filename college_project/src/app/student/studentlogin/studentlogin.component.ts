@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from 'src/app/landing/services/data.service';
+import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-studentlogin',
