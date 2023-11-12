@@ -1,0 +1,12 @@
+<p>parent works!</p>
+<br>
+City: <input type="text" [(ngModel)]="cityName">
+
+<br>
+{{studentName1}}
+<br>{{employeeName1}}
+
+---------------------------------------------------------------------------
+
+<app-child [city]="cityName"
+(studentEvent)="passData($event)"></app-child>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LogindatashreService } from 'src/app/services/logindatashre.service';
+import { DataService } from 'src/service/data.service';
 
 @Component({
   selector: 'app-livepage2',
@@ -8,8 +9,21 @@ import { LogindatashreService } from 'src/app/services/logindatashre.service';
 })
 export class Livepage2Component {
   user:any;
- constructor(private logindatashreService: LogindatashreService){}
+  username:any;
+  datafromchild:any;
+  citynameis:any;
+
+ constructor(private logindatashreService: LogindatashreService ,private dataService:DataService){}
  ngOnInit(){
   this.user=this.logindatashreService.usersname;
  }
+
+ passDATA(data:any){
+  this.datafromchild=data;
+ }
+
+ setdata(){
+  this.dataService.city.next(this.citynameis);
+ }
+
 }

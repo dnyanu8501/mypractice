@@ -23,6 +23,9 @@ export class LandingComponent {
  userModule(){
   this.router.navigateByUrl("user/login")
  }
+ parentcomponent(){
+  this.router.navigateByUrl("parentcom");
+ }
  
 
 }

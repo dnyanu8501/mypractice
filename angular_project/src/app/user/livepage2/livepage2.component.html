@@ -1,2 +1,18 @@
 <p>livepage2 works!</p>
 {{user}}
+<br>
+username<input type="text" [(ngModel)]="username">
+<br>
+{{datafromchild}}
+<br><br>
+subjectData <input type="text" [(ngModel)]="citynameis">
+<button (click)="setdata()">set to subject data </button>
+<br><br>
+
+---------------------------------------------------------------------------
+<br><br>
+<app-livepage3 [parentusername]="username"
+(passEvent)="passDATA($event)"
+></app-livepage3>
+
+

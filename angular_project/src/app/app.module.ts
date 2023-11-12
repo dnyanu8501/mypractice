@@ -7,13 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProductComponent } from './product/product.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LandingComponent,
-    ProductComponent
+    ProductComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

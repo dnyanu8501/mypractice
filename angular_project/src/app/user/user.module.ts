@@ -7,6 +7,7 @@ import { LivepageComponent } from './livepage/livepage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsmoduleformatComponent } from './formsmoduleformat/formsmoduleformat.component';
 import { Livepage2Component } from './livepage2/livepage2.component';
+import { Livepage3Component } from './livepage3/livepage3.component';
 
 
 
@@ -16,6 +17,7 @@ import { Livepage2Component } from './livepage2/livepage2.component';
     LivepageComponent,
     FormsmoduleformatComponent,
     Livepage2Component,
+    Livepage3Component,
  
   ],
   imports: [
