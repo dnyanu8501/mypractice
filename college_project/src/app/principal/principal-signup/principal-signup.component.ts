@@ -30,7 +30,7 @@ export class PrincipalSignupComponent {
       password:['',[Validators.maxLength(15)]],
       email:['',[Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       cnumber:['',[Validators.pattern('[0-9]*')]],
-      gender:[],
+      gender:['male'],
       
       
 
@@ -43,13 +43,15 @@ export class PrincipalSignupComponent {
   //     })
   // }
   whitespacefun(customval :any){
-    console.log('whitespaces');
+    // console.log('whitespaces');
     
     let customwhite=customval.value?customval.value?.trim().length==0:null;
     return customwhite ? {'whiteSpace': true}:null;
   }
 
   submit(){
+   
+    
     let genvalue=this.signControlForm.value.gender;
     if(genvalue){
     console.log('data',this.signControlForm.value);

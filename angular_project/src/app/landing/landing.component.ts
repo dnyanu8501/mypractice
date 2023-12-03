@@ -26,6 +26,41 @@ export class LandingComponent {
  parentcomponent(){
   this.router.navigateByUrl("parentcom");
  }
+ searchtable(){
+  this.router.navigateByUrl("searchtbl");
+ }
+
+ ngOnChanges(){
+  console.log("calling  ngonchanges ");
+  
+ }
+ ngOnInit(){
+  console.log("calling  ngoninit ");
+  
+ }
+ ngDoCheck(){
+  console.log("calling  ngDoChecked ");
+  
+ }
+ ngAfterContentInit(){
+  console.log("calling ngAfterContentInit" );
+  
+ }
+ ngAfterContentChecked(){
+  console.log("calling ngAfterContentChecked" );
+   
+ }
+ ngAfterViewInit(){
+  console.log("calling ngAfterViewInit" );
+ }
+ ngAfterViewChecked(){
+  console.log("calling ngAfterViewChecked" );
+
+ }
+ ngOnDestroy(){
+  console.log("calling ngOnDestroy" );
+ }
+
  
 
 }

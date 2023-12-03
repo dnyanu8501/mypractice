@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { LogindatashreService } from '../services/logindatashre.service';
 
 @Component({
@@ -9,8 +9,10 @@ import { LogindatashreService } from '../services/logindatashre.service';
 export class ChildComponent {
  @Input() city:any;
  @Output() studentEvent = new EventEmitter<any>();
+ @ViewChild('para') eleRef!:ElementRef;
  emp:any;
  stdName:any;
+ cars1:any;
 constructor(private logindatashreService:LogindatashreService){}
 
  submit(){
@@ -19,4 +21,9 @@ constructor(private logindatashreService:LogindatashreService){}
  setData(){
 this.logindatashreService.empName.next(this.emp);
  }
+
+ngAfterViewInit(){
+  this.eleRef.nativeElement.innerHTML="gavade"
+}
+
 }

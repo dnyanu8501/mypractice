@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-searchtable',
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SearchtableComponent {
 
-  searchedValue:any;
+searchedValue:any;
+
  headings=['name','age','city']
   student=[
     {name:'ram', age:20,city:'pune'},

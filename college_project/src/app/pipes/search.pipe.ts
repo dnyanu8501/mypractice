@@ -6,11 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchPipe implements PipeTransform {
 
   transform(data: any, searchdata: any): any {
-    console.log('data' ,data);
-    console.log("searchdata",searchdata);
-    
-    
-    return data;
+    if(!searchdata){
+      return data;
+    }
+let original=searchdata.toLowerCase();
+ return data.filter ((item:any )=>{
+  return JSON.stringify(item).toLowerCase().includes(original);
+ })
+
   }
 
 }

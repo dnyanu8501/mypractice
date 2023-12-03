@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PrincipalHomeComponent } from './principal-home/principal-home.component';
+
 import { PrincipalSignupComponent } from './principal-signup/principal-signup.component';
 import { PrincipalLoginComponent } from './principal-login/principal-login.component';
 

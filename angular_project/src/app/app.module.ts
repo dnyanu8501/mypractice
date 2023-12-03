@@ -9,6 +9,9 @@ import { LandingComponent } from './landing/landing.component';
 import { ProductComponent } from './product/product.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SearchtblComponent } from './searchtbl/searchtbl.component';
+import { SearchPipe } from './pipes/search.pipe';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ChildComponent } from './child/child.component';
     LandingComponent,
     ProductComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    SearchtblComponent,
+    SearchPipe,
+  
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<h2>Search Table</h2>
+<br>
+<input type="text" [(ngModel)]="searchValue"><br>
+<br>
+<table>
+    <tr>
+        <th *ngFor="let data of tableheading">{{data}}</th>
+    </tr>
+    <tr *ngFor="let detail of tabledata | search :searchValue">
+        <td >{{detail.name}}</td>
+        <td >{{detail.city}}</td>
+        <td >{{detail.contact}}</td>
+    </tr>
+</table>

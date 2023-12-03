@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { ProductComponent } from './product/product.component';
 import { ParentComponent } from './parent/parent.component';
+import { SearchtblComponent } from './searchtbl/searchtbl.component';
+
 
 
 const routes: Routes = [ 
@@ -12,6 +14,7 @@ const routes: Routes = [
   {path:"product",component:ProductComponent},
   {path:'back',component:LandingComponent},
   { path:"parentcom" , component:ParentComponent},
+  {path:"searchtbl" , component:SearchtblComponent},     
   
 
 

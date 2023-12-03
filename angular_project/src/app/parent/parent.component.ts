@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { LogindatashreService } from '../services/logindatashre.service';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -10,6 +11,8 @@ export class ParentComponent {
   cityName:any;
   studentName1:any;
   employeeName1:any;
+  carsName:any;
+  @ViewChild(ChildComponent) childRef!:ChildComponent;
   
   constructor(private logindatashreService:LogindatashreService){}
   ngOnInit(){
@@ -20,6 +23,10 @@ export class ParentComponent {
   
   passData(data:any){
     this.studentName1=data;
+  }
+  carFun(){
+    this.childRef.cars1=this.carsName;
+
   }
 
  

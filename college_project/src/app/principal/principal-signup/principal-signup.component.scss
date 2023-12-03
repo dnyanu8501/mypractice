@@ -2,25 +2,7 @@
 .err{
     color: red;
 }
-// .container{
-//         background-color: skyblue;
-//         width: 30%;
-//         margin: 30px;
-//         padding: 10px;
-// }
-// input[type="text"]{
-//     width: 100%;
-//     color: rgb(235, 152, 44);
 
-// }
-// .label{
-//     font-size: 20px bold;
-// }
-// .buttonn {
-//     text-align: center;
-//     border-radius: 10px;
-//     background-color: red;
-// }
 .container{
     /* padding: 0 10px; */
  text-align: center;
@@ -44,6 +26,9 @@ body{
     background-image: url("../../../assets/books1.jpeg");
     /* background-repeat: no-repeat; */
     background-size: cover;
+}
+h1{
+    color: white;
 }
 .main{
     /* height: 400px; */

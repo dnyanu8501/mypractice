@@ -1,19 +1,4 @@
-<!-- <div class="container">
-    <h1>SignUp Form</h1>
-    <form [formGroup]="signupFormGroup">
-        <label> User Name</label><br>
-        <input type="text" formControlName="username"><br>
-        <span class="err" *ngIf="signupFormGroup.get('username')?.errors?.['maxlength']">Maximum 10 Character Allowed</span>
-        <br>
 
-        <label>Email Id</label><br>
-        <input type="text" formControlName="emailid" ><br>
-        <span class="err" *ngIf="signupFormGroup.get('emailid')?.errors?.['minlength']"> Email Id Required</span>
-
-        <br><br>
-        <button class="btn" (click)="submit()" [disabled]="!signupFormGroup.valid">submit</button>
-    </form>
-</div> -->
 <body>
     <div class="container">
         <form [formGroup]="signControlForm">
@@ -61,8 +46,8 @@
            
                 
                     <label for="">Gender :-</label>
-                    <input type="radio" formControlName="gender" value="Male" (change)="genselect()" >Male
-                    <input type="radio" formControlName="gender" value="Female" (change)="genselect()">Female            
+                    <input type="radio" formControlName="gender"  value="Male" (change)="genselect()" >Male
+                    <input type="radio"  value="Female" (change)="genselect()">Female            
                     <br>
                     <span class="err" *ngIf="genderselector">Please Select Gender </span>
 <br>
