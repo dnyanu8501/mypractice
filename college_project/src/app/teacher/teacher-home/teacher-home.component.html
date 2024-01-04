@@ -1,0 +1,33 @@
+<br>
+<button routerLink="/teacher/parent">parent</button>
+<br>
+<div>
+    <form [formGroup]="practiceForm">
+        <label >name</label>
+        <br>
+        <input type="text" formControlName="name">  
+        <br>
+        <label *ngIf="practiceForm.get('name')?.errors?.['required'] && practiceForm.get('name')?.touched" class="err">Name is Required</label>
+        <br>  
+        <label for="">Address</label>
+        <br>
+        <input type="text" formControlName="address">  
+        <br>
+        <button (click)="submitData()">submit</button>   
+    </form>
+</div>
+<br><br>
+<div>
+    <form #loginForm="ngForm">
+        <label >user name</label>
+        <br>
+        <input name="userName" type="text" #userName="ngModel" ngModel>  
+        <br>  
+        <label for="">password</label>
+        <br>
+        <input type="text" #password="ngModel" ngModel name="password" >  
+        <br>
+        <button (click)="login(loginForm.value)">submit</button>
+
+    </form>
+</div>

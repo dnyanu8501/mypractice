@@ -9,7 +9,8 @@ const routes: Routes = [
   {path:"searchtbl", component:SearchtableComponent},
 
   {path:"principalmod",loadChildren:()=> import("./principal/principal.module").then(m =>m.PrincipalModule)},
-  {path:"studentmodule",loadChildren:() => import("./student/student.module").then(m=>m.StudentModule) }
+  {path:"studentmodule",loadChildren:() => import("./student/student.module").then(m=>m.StudentModule) },
+  {path:'teacher',loadChildren:()=>import('./teacher/teacher.module').then(mod=>mod.TeacherModule)}
 ];
 
 @NgModule({

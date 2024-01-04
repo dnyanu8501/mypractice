@@ -1,0 +1,24 @@
+<p>parent !</p>
+<br>
+<label for="">name</label>
+<input [(ngModel)]="name" type="text" appCharOnly>
+<br>
+{{password}}
+<br>
+<br><br>
+<label for="">View Child</label>
+<input type="text" [(ngModel)]="view">
+<button (click)="viewCopmo()">View</button>
+<br><br>
+<label for="">subject</label>
+<input type="text" [(ngModel)]="city">
+<br>
+<button (click)="carDetails()">subject</button>
+<br>
+<label for="">cat</label>
+<input type="text" [(ngModel)]="catName"><br>
+<button (click)="catNameData()">cat Name</button>
+-------------------------------------------------------
+<br>
+<app-child [userName]="name" (passwordevent)="data($event)"></app-child>
+

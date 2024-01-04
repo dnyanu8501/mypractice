@@ -1,0 +1,15 @@
+<p>parent Component!</p>
+ 
+<input type="text" [(ngModel)]="name">
+
+<br>
+{{pass}}
+<br>
+{{address}}
+<br>
+subject <input type="text" [(ngModel)]="userAddress">
+<button (click)="userAddressClick()" >click</button>
+<br>
+________________________________________________________________
+<br>
+<app-child [userName]="name"  (passEvent)="passData($event)" (passValue)="addresUser($event)"></app-child>
