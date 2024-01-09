@@ -10,14 +10,14 @@ import { Component, ElementRef } from '@angular/core';
 export class LandingComponent {
    arr=[1];
    count=1
-   
+   color="green"
  constructor(private elementRef:ElementRef){}
   addCircle(){
   this.count++
    let Length=this.arr.length
   this.arr.push(1)
 }
-color(){
+color1(){
   this.elementRef.nativeElement.color="green"
  console.log(this.count);
 }
