@@ -6,15 +6,16 @@
     margin: auto;
     
 }
-.container:hover{
-    background-color: rgb(115, 119, 123);
-}
-.container:active{
-    background-color: rgb(27, 107, 9);
-    
-}
 
 .main{
     margin: auto;
     text-align: center;
+}
+.cir{
+    
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border: 2px solid black;
 }

@@ -1,12 +1,19 @@
-<div class="main">
+<body class="main">
 
 <button (click)="addCircle()">Add circle</button>
 <br>
 <label for="">count :{{count}}</label>
 <br><br>
-<div class="container" *ngFor="let data of arr">
-    <div (click)="color1()"></div>
-    
 
+    <div *ngFor="let circle of circles" class="cir"
+     [class.selected]="circle.isSelected"
+     [style.background-color]="circle.backgroundColor"
+     (click)="toggleSelectCircle(circle)">
+  
 </div>
-</div>
+   
+
+
+</body>
+
+    

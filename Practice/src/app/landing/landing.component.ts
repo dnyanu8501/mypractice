@@ -8,18 +8,38 @@ import { Component, ElementRef } from '@angular/core';
   
 })
 export class LandingComponent {
-   arr=[1];
-   count=1
-   color="green"
+  circles: { id: number, isSelected: boolean, backgroundColor: string }[] = [];
+  nextCircleId = 1;
+  selectedCircle?: { id: number, isSelected: boolean, backgroundColor: string } ;
+ count=0;
  constructor(private elementRef:ElementRef){}
-  addCircle(){
-  this.count++
-   let Length=this.arr.length
-  this.arr.push(1)
-}
-color1(){
-  this.elementRef.nativeElement.color="green"
- console.log(this.count);
-}
+  toggleSelectCircle(circle: { id: number, isSelected: boolean, backgroundColor: string }) {
+    console.log(circle);
+    console.log(this.selectedCircle);
+    
+     if (circle === this.selectedCircle) {
+       circle.isSelected = !circle.isSelected;
+       circle.backgroundColor == 'grey'? circle.backgroundColor ='green' :circle.backgroundColor ='grey'
+     } else {
+       if(this.selectedCircle) {
+         this.selectedCircle.isSelected = false;
+         this.selectedCircle.backgroundColor = 'grey'
+       }
+       circle.isSelected = true;
+       circle.backgroundColor = 'green'
+       this.selectedCircle = circle;
+     }
+   }
+   addCircle() {
+     const newCircle = {
+       id: this.nextCircleId,
+       isSelected: false,
+       
+       backgroundColor:'grey'
+     };
+     this.count++
+     this.circles.push(newCircle);
+     this.nextCircleId++;
+   }
 }
 
